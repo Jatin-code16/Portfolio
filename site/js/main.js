@@ -6,7 +6,7 @@ const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(RM){root.classList.remove('splash');intro.remove();return}
  try{
   const SP='cubic-bezier(.34,1.5,.5,1)',EO='cubic-bezier(.22,1,.36,1)',sleep=ms=>new Promise(r=>setTimeout(r,ms));
-  iw.innerHTML=[...'JATIN NAIK'].map(c=>c===' '?'<span class="is"></span>':'<span class="il">'+c+'</span>').join('');
+  iw.innerHTML=[...'Jatin Naik'].map(c=>c===' '?'<span class="is"></span>':'<span class="il">'+c+'</span>').join('');
   const L=[...iw.querySelectorAll('.il')];
   await Promise.race([document.fonts.ready,sleep(1500)]);
   await Promise.all(L.map((el,i)=>el.animate([{opacity:0,transform:'translateY(.6em)'},{opacity:1,transform:'none'}],{duration:560,delay:i*38,easing:SP,fill:'forwards'}).finished));
